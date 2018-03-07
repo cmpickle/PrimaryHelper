@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="20px"
     android:orientation="vertical"
-    tools:context="com.herokuapp.cmpickle.primaryhelper.AddKidFragment"
+    tools:context="com.herokuapp.cmpickle.primaryhelper.AddKid.AddKidFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 

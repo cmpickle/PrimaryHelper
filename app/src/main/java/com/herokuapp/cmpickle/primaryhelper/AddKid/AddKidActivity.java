@@ -1,7 +1,9 @@
-package com.herokuapp.cmpickle.primaryhelper;
+package com.herokuapp.cmpickle.primaryhelper.AddKid;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.herokuapp.cmpickle.primaryhelper.R;
 
 public class AddKidActivity extends Activity {
 

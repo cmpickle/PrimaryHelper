@@ -1,4 +1,4 @@
-package com.herokuapp.cmpickle.primaryhelper;
+package com.herokuapp.cmpickle.primaryhelper.AddKid;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.herokuapp.cmpickle.primaryhelper.Main.MainActivity;
+import com.herokuapp.cmpickle.primaryhelper.R;
 
 /**
  * Created by cmpickle on 2/25/18.
