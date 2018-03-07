@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 import com.herokuapp.cmpickle.primaryhelper.Database.Tables.Kid;
 import com.herokuapp.cmpickle.primaryhelper.R;
 import com.herokuapp.cmpickle.primaryhelper.adapter.KidAdapter;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import butterknife.BindView;
@@ -29,17 +31,18 @@ public class MainActivityFragment extends Fragment implements KidAdapter.OnItemC
     @BindView(R.id.recyclerview_kids)
     RecyclerView rvKids;
 
-    ArrayList<Kid> kids = new ArrayList<>();
+    List<Kid> kids = new ArrayList<>();
 
     public MainActivityFragment() {
-        Kid kid = new Kid();
-        kid.id = UUID.randomUUID();
-        kid.inClass = true;
-        kid.firstName = "Andy";
-        kid.lastName = "Anderson";
-        kid.birthday = new Date(1520386118);
-        kid.save();
-        kids.add(kid);
+//        Kid kid = new Kid();
+//        kid.id = UUID.randomUUID();
+//        kid.inClass = true;
+//        kid.firstName = "John";
+//        kid.lastName = "Casey";
+//        kid.birthday = new Date(1520386118);
+//        kid.save();
+        kids = SQLite.select().from(Kid.class).queryList();
+
     }
 
     @Override
@@ -65,5 +68,6 @@ public class MainActivityFragment extends Fragment implements KidAdapter.OnItemC
     @Override
     public void onItemCheck(Kid kid) {
         kid.inClass = !kid.inClass;
+        kid.save();
     }
 }

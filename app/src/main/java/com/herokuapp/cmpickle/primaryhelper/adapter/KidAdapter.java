@@ -13,6 +13,7 @@ import com.herokuapp.cmpickle.primaryhelper.R;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
 
 public class KidAdapter extends RecyclerView.Adapter<KidAdapter.KidHolder> {
 
-    private final ArrayList<Kid> kids;
+    private final List<Kid> kids;
     private final OnItemClickListener onItemClickListener;
     private final OnItemCheckListener onItemCheckListener;
 
@@ -35,7 +36,7 @@ public class KidAdapter extends RecyclerView.Adapter<KidAdapter.KidHolder> {
         void onItemCheck(Kid kid);
     }
 
-    public KidAdapter(ArrayList<Kid> kids, OnItemClickListener onItemClickListener, OnItemCheckListener onItemCheckListener) {
+    public KidAdapter(List<Kid> kids, OnItemClickListener onItemClickListener, OnItemCheckListener onItemCheckListener) {
         this.kids = kids;
         this.onItemClickListener = onItemClickListener;
         this.onItemCheckListener = onItemCheckListener;
