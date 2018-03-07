@@ -12,11 +12,14 @@ import android.view.MenuItem;
 import com.herokuapp.cmpickle.primaryhelper.AddKid.AddKidActivity;
 import com.herokuapp.cmpickle.primaryhelper.R;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

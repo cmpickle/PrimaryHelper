@@ -4,6 +4,7 @@ import com.herokuapp.cmpickle.primaryhelper.Database.PrimaryHelperDatabase;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import java.util.Date;
 import java.util.UUID;
@@ -13,20 +14,20 @@ import java.util.UUID;
  */
 
 @Table(database = PrimaryHelperDatabase.class)
-public class Kids {
+public class Kid extends BaseModel {
 
     @PrimaryKey
-    UUID id;
+    public UUID id;
 
     @Column
-    boolean inClass;
+    public boolean inClass;
 
     @Column
-    String firstName;
+    public String firstName;
 
     @Column
-    String lastName;
+    public String lastName;
 
     @Column
-    Date birthday;
+    public Date birthday;
 }

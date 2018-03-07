@@ -25,6 +25,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/et_kid_firstname"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -42,10 +43,28 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/et_kid_lastname"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
     </android.support.v7.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_kid_birthday"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_submit_kid"
